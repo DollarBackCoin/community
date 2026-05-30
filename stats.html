@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stats - BACKChain Lite</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo.png" alt="BACKChain Lite Logo" height="30">
+                BACKChain Lite
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="my-story.html">My Story</a></li>
+                    <li class="nav-item"><a class="nav-link" href="my-goals.html">30 Days of BACK</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gofundme.html">GoFundMe</a></li>
+                    <li class="nav-item"><a class="nav-link" href="skill-swap.html">Skill Swap</a></li>
+                    <li class="nav-item"><a class="nav-link" href="barter-board.html">Barter Board</a></li>
+                    <li class="nav-item"><a class="nav-link" href="back-up-board.html">BACK Up Board</a></li>
+                    <li class="nav-item"><a class="nav-link" href="burn-wall.html">Burn Wall</a></li>
+                    <li class="nav-item"><a class="nav-link" href="leaderboard.html">Leaderboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="stats.html">Stats</a></li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" id="loginBtn">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <section class="text-center py-4">
+            <h1>📊 BACK Community Stats</h1>
+            <p class="lead">Track the growth of the BACKChain Lite community.</p>
+        </section>
+
+        <!-- Stats Grid -->
+        <section class="py-4">
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title" id="totalBackStats">0</h3>
+                            <p class="card-text">Total BACK in Circulation</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title" id="totalStoriesStats">0</h3>
+                            <p class="card-text">Stories Shared</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title" id="totalUsersStats">0</h3>
+                            <p class="card-text">Community Members</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title" id="totalDonationsStats">0</h3>
+                            <p class="card-text">BACK Donated</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title" id="totalSwapsStats">0</h3>
+                            <p class="card-text">Skill Swaps Completed</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title" id="totalBurnsStats">0</h3>
+                            <p class="card-text">BACK Burned</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2026 BACKChain Lite. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Firebase and Custom JS -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
+    <script src="assets/js/firebase-config.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

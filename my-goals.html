@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30 Days of BACK - BACKChain Lite</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo.png" alt="BACKChain Lite Logo" height="30">
+                BACKChain Lite
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="my-story.html">My Story</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="my-goals.html">30 Days of BACK</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gofundme.html">GoFundMe</a></li>
+                    <li class="nav-item"><a class="nav-link" href="skill-swap.html">Skill Swap</a></li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" id="loginBtn">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <section class="text-center py-4">
+            <h1>🎯 30 Days of BACK</h1>
+            <p class="lead">Complete challenges to earn BACK tokens and badges.</p>
+        </section>
+
+        <!-- Challenges Section -->
+        <section class="py-4">
+            <h2 class="mb-4">Active Challenges</h2>
+            <div class="row" id="challengesGrid">
+                <!-- Challenges will be loaded here via JavaScript -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Learn a New Skill</h5>
+                            <p class="card-text">Spend 1 hour daily learning a new skill for 30 days.</p>
+                            <p class="card-text"><strong>Reward:</strong> 50 BACK + Resilience Badge</p>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#joinChallengeModal" data-challenge-id="1">Join Challenge</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Meditate Daily</h5>
+                            <p class="card-text">Meditate for at least 10 minutes every day for 30 days.</p>
+                            <p class="card-text"><strong>Reward:</strong> 30 BACK + Mindfulness Badge</p>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#joinChallengeModal" data-challenge-id="2">Join Challenge</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Volunteer 10 Hours</h5>
+                            <p class="card-text">Volunteer for a cause you care about for a total of 10 hours.</p>
+                            <p class="card-text"><strong>Reward:</strong> 100 BACK + Hero Badge</p>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#joinChallengeModal" data-challenge-id="3">Join Challenge</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- User Progress Section -->
+        <section class="py-4">
+            <h2 class="mb-4">Your Progress</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Active Challenges</h5>
+                            <ul class="list-group list-group-flush" id="userChallengesList">
+                                <!-- User's active challenges will be loaded here -->
+                                <li class="list-group-item">No active challenges yet.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Completed Challenges</h5>
+                            <ul class="list-group list-group-flush" id="completedChallengesList">
+                                <!-- User's completed challenges will be loaded here -->
+                                <li class="list-group-item">No completed challenges yet.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Join Challenge Modal -->
+    <div class="modal fade" id="joinChallengeModal" tabindex="-1" aria-labelledby="joinChallengeModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="joinChallengeModalLabel">Join Challenge</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to join this challenge? Once joined, you can track your progress and earn rewards upon completion.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="confirmJoinChallengeBtn">Join Challenge</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2026 BACKChain Lite. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Firebase and Custom JS -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
+    <script src="assets/js/firebase-config.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
