@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events - BACKChain Lite</title>
+    <title>Events - $BACK</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="bg-black text-light">
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-gold">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="assets/images/logo.png" alt="BACKChain Lite Logo" height="30">
-                BACKChain Lite
+                <img src="assets/images/logo.png" alt="$BACK Logo" height="40" class="me-2">
+                <span class="fw-bold gold-text">$BACK</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -29,68 +32,90 @@
                     <li class="nav-item"><a class="nav-link" href="back-up-board.html">BACK Up Board</a></li>
                     <li class="nav-item"><a class="nav-link" href="burn-wall.html">Burn Wall</a></li>
                     <li class="nav-item"><a class="nav-link" href="leaderboard.html">Leaderboard</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link active gold-text" href="events.html">Events</a></li>
                 </ul>
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" id="loginBtn">Login</a></li>
+                    <li class="nav-item"><a class="nav-link gold-text fw-bold" href="#" id="loginBtn">Login</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Main Content -->
-    <main class="container my-5">
-        <section class="text-center py-4">
-            <h1>📅 BACK Events</h1>
-            <p class="lead">Join community events and AMAs.</p>
+    <main>
+        <!-- Hero Section -->
+        <section class="py-5 text-center">
+            <div class="container">
+                <h1 class="display-4 gold-text fw-bold mb-4">📅 BACK Events</h1>
+                <p class="lead fs-5 mb-5">
+                    Join the community. Share your knowledge. Learn from others.
+                    These are the gatherings of men who refuse to quit.
+                </p>
+            </div>
         </section>
 
         <!-- Events Grid -->
         <section class="py-4">
-            <div class="row" id="eventsGrid">
-                <!-- Events will be loaded here via JavaScript -->
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Community AMA</h5>
-                            <p class="card-text">Join our monthly AMA with the BACKChain Lite team.</p>
-                            <p class="card-text"><strong>Date:</strong> June 15, 2026</p>
-                            <p class="card-text"><strong>Time:</strong> 7:00 PM CET</p>
-                            <a href="#" class="btn btn-primary">RSVP</a>
+            <div class="container">
+                <h2 class="text-center gold-text mb-5">Upcoming Events</h2>
+                <div class="row" id="eventsGrid">
+                    <!-- Example Event Card -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card bg-dark border-gold h-100">
+                            <div class="card-body text-center">
+                                <h5 class="card-title gold-text">Community AMA</h5>
+                                <p class="card-text">
+                                    Join our monthly AMA with the BACKChain Lite team.
+                                    Ask questions, share ideas, and connect with the community.
+                                </p>
+                                <p class="card-text"><strong class="gold-text">Date:</strong> June 15, 2026</p>
+                                <p class="card-text"><strong class="gold-text">Time:</strong> 7:00 PM CET</p>
+                                <a href="#" class="btn btn-gold mt-3">RSVP</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Skill Sharing Session</h5>
-                            <p class="card-text">Share your skills with the community.</p>
-                            <p class="card-text"><strong>Date:</strong> June 20, 2026</p>
-                            <p class="card-text"><strong>Time:</strong> 6:00 PM CET</p>
-                            <a href="#" class="btn btn-primary">RSVP</a>
+                    <div class="col-md-4 mb-4">
+                        <div class="card bg-dark border-gold h-100">
+                            <div class="card-body text-center">
+                                <h5 class="card-title gold-text">Skill Sharing Session</h5>
+                                <p class="card-text">
+                                    Share your skills with the community. Whether it’s coding, design, or writing,
+                                    we all have something to teach.
+                                </p>
+                                <p class="card-text"><strong class="gold-text">Date:</strong> June 20, 2026</p>
+                                <p class="card-text"><strong class="gold-text">Time:</strong> 6:00 PM CET</p>
+                                <a href="#" class="btn btn-gold mt-3">RSVP</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">BACK Token Giveaway</h5>
-                            <p class="card-text">Win BACK tokens by participating in our giveaway!</p>
-                            <p class="card-text"><strong>Date:</strong> June 25, 2026</p>
-                            <p class="card-text"><strong>Time:</strong> 8:00 PM CET</p>
-                            <a href="#" class="btn btn-primary">RSVP</a>
+                    <div class="col-md-4 mb-4">
+                        <div class="card bg-dark border-gold h-100">
+                            <div class="card-body text-center">
+                                <h5 class="card-title gold-text">BACK Token Giveaway</h5>
+                                <p class="card-text">
+                                    Win BACK tokens by participating in our giveaway!
+                                    Open to all community members.
+                                </p>
+                                <p class="card-text"><strong class="gold-text">Date:</strong> June 25, 2026</p>
+                                <p class="card-text"><strong class="gold-text">Time:</strong> 8:00 PM CET</p>
+                                <a href="#" class="btn btn-gold mt-3">RSVP</a>
+                            </div>
                         </div>
                     </div>
+                    <!-- More events will be loaded here via JavaScript -->
                 </div>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
+    <footer class="bg-black text-white py-4 border-top border-gold">
         <div class="container text-center">
-            <p>&copy; 2026 BACKChain Lite. All rights reserved.</p>
+            <p class="mb-2">$BACK: The Token for Act II.</p>
+            <p class="text-muted small mb-0">
+                $BACK is a community token with no monetary value. This platform is for entertainment and community-building purposes only.
+            </p>
         </div>
     </footer>
 

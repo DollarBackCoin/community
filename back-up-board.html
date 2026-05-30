@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BACK Up Board - BACKChain Lite</title>
+    <title>BACK Up Board - $BACK</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="bg-black text-light">
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-gold">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="assets/images/logo.png" alt="BACKChain Lite Logo" height="30">
-                BACKChain Lite
+                <img src="assets/images/logo.png" alt="$BACK Logo" height="40" class="me-2">
+                <span class="fw-bold gold-text">$BACK</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -23,80 +26,110 @@
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="my-story.html">My Story</a></li>
                     <li class="nav-item"><a class="nav-link" href="my-goals.html">30 Days of BACK</a></li>
-                    <li class="nav-item"><a class="nav-link" href=\"gofundme.html\">GoFundMe</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gofundme.html">GoFundMe</a></li>
                     <li class="nav-item"><a class="nav-link" href="skill-swap.html">Skill Swap</a></li>
                     <li class="nav-item"><a class="nav-link" href="barter-board.html">Barter Board</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="back-up-board.html">BACK Up Board</a></li>
+                    <li class="nav-item"><a class="nav-link active gold-text" href="back-up-board.html">BACK Up Board</a></li>
                 </ul>
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" id="loginBtn">Login</a></li>
+                    <li class="nav-item"><a class="nav-link gold-text fw-bold" href="#" id="loginBtn">Login</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Main Content -->
-    <main class="container my-5">
-        <section class="text-center py-4">
-            <h1>🤝 BACK Up Board</h1>
-            <p class="lead">Request or donate BACK tokens to help others in need.</p>
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addRequestModal">Create a Request</button>
+    <main>
+        <!-- Hero Section -->
+        <section class="py-5 text-center">
+            <div class="container">
+                <h1 class="display-4 gold-text fw-bold mb-4">🤝 BACK Up Board</h1>
+                <p class="lead fs-5 mb-5">
+                    Sometimes, a man needs a hand. Request or donate BACK tokens to help others in the community.
+                    No charity—just solidarity.
+                </p>
+                <button class="btn btn-gold btn-lg px-4" data-bs-toggle="modal" data-bs-target="#addRequestModal">
+                    Create a Request
+                </button>
+            </div>
         </section>
 
         <!-- Requests Grid -->
         <section class="py-4">
-            <div class="row" id="requestsGrid">
-                <!-- Requests will be loaded here via JavaScript -->
+            <div class="container">
+                <h2 class="text-center gold-text mb-5">Active Requests</h2>
+                <div class="row" id="requestsGrid">
+                    <!-- Example Request Card -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card bg-dark border-gold h-100">
+                            <div class="card-body">
+                                <h5 class="card-title gold-text">Medical Bills</h5>
+                                <p class="card-text">
+                                    Facing unexpected medical expenses. Any BACK donated will help me get back on my feet.
+                                </p>
+                                <p class="card-text"><strong class="gold-text">Goal:</strong> 500 BACK</p>
+                                <p class="card-text"><strong class="gold-text">Raised:</strong> 200 BACK</p>
+                                <p class="card-text"><small class="text-muted">By Tom H. | Medical</small></p>
+                                <a href="#" class="btn btn-outline-gold btn-sm mt-2">Donate</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- More requests will be loaded here via JavaScript -->
+                </div>
             </div>
         </section>
     </main>
 
     <!-- Add Request Modal -->
-    <div class="modal fade" id="addRequestModal" tabindex="-1" aria-labelledby="addRequestModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="addRequestModalLabel">Create a Request</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <div class="modal fade" id="addRequestModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header border-bottom border-gold">
+                    <h5 class="modal-title gold-text">Create a Request</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <form id="requestForm">
                         <div class="mb-3">
-                            <label for="requestTitle" class="form-label">Title</label>
-                            <input type="text" class="form-control" id="requestTitle" required>
+                            <label for="requestTitle" class="form-label gold-text">Title</label>
+                            <input type="text" class="form-control bg-dark text-light border-gold" id="requestTitle" placeholder="e.g., Medical Bills" required>
                         </div>
                         <div class="mb-3">
-                            <label for="requestDescription" class="form-label">Description</label>
-                            <textarea class="form-control" id="requestDescription" rows="3" required></textarea>
+                            <label for="requestDescription" class="form-label gold-text">Description</label>
+                            <textarea class="form-control bg-dark text-light border-gold" id="requestDescription" rows="5" placeholder="Explain your situation..." required></textarea>
                         </div>
                         <div class="mb-3">
-                            <label for="requestGoal" class="form-label">BACK Goal</label>
-                            <input type="number" class="form-control" id="requestGoal" required>
+                            <label for="requestGoal" class="form-label gold-text">BACK Goal</label>
+                            <input type="number" class="form-control bg-dark text-light border-gold" id="requestGoal" placeholder="e.g., 500" required>
                         </div>
                         <div class="mb-3">
-                            <label for="requestCategory" class="form-label">Category</label>
-                            <select class="form-select" id="requestCategory" required>
-                                <option value="Medical">Medical</option>
-                                <option value="Rent">Rent</option>
-                                <option value="Food">Food</option>
-                                <option value="Other">Other</option>
+                            <label for="requestCategory" class="form-label gold-text">Category</label>
+                            <select class="form-select bg-dark text-light border-gold" id="requestCategory" required>
+                                <option value="" disabled selected>Select a category</option>
+                                <option value="Medical" class="bg-dark">Medical</option>
+                                <option value="Rent" class="bg-dark">Rent</option>
+                                <option value="Food" class="bg-dark">Food</option>
+                                <option value="Other" class="bg-dark">Other</option>
                             </select>
                         </div>
                     </form>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" id="submitRequestBtn">Submit Request</button>
+                <div class="modal-footer border-top border-gold">
+                    <button type="button" class="btn btn-outline-gold" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-gold" id="submitRequestBtn">Submit Request</button>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
+    <footer class="bg-black text-white py-4 border-top border-gold">
         <div class="container text-center">
-            <p>&copy; 2026 BACKChain Lite. All rights reserved.</p>
+            <p class="mb-2">$BACK: The Token for Act II.</p>
+            <p class="text-muted small mb-0">
+                $BACK is a community token with no monetary value. This platform is for entertainment and community-building purposes only.
+            </p>
         </div>
     </footer>
 

@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile - BACKChain Lite</title>
+    <title>Profile - $BACK</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="bg-black text-light">
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-gold">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="assets/images/logo.png" alt="BACKChain Lite Logo" height="30">
-                BACKChain Lite
+                <img src="assets/images/logo.png" alt="$BACK Logo" height="40" class="me-2">
+                <span class="fw-bold gold-text">$BACK</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -33,44 +36,53 @@
                     <li class="nav-item"><a class="nav-link" href="stats.html">Stats</a></li>
                 </ul>
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link active" href="profile.html">Profile</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" id="loginBtn">Login</a></li>
+                    <li class="nav-item"><a class="nav-link active gold-text" href="profile.html">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link gold-text fw-bold" href="#" id="loginBtn">Login</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Main Content -->
-    <main class="container my-5">
-        <section class="text-center py-4">
-            <h1>👤 Your Profile</h1>
-            <p class="lead">Manage your BACKChain Lite profile.</p>
+    <main>
+        <!-- Hero Section -->
+        <section class="py-5 text-center">
+            <div class="container">
+                <h1 class="display-4 gold-text fw-bold mb-4">👤 Your Profile</h1>
+                <p class="lead fs-5 mb-5">
+                    This is your space. Your story. Your value.
+                </p>
+            </div>
         </section>
 
         <!-- Profile Card -->
         <section class="py-4">
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <div class="card">
-                        <div class="card-body text-center">
-                            <img src="https://via.placeholder.com/150" class="rounded-circle mb-3" alt="Profile Picture">
-                            <h3 id="profileUsername">Guest</h3>
-                            <p class="text-muted" id="profileBio">Share your bio here.</p>
-                            <div class="row text-center mt-4">
-                                <div class="col-md-4">
-                                    <h5>BACK Balance</h5>
-                                    <p id="profileBackBalance">0</p>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="card bg-dark border-gold">
+                            <div class="card-body text-center">
+                                <img src="https://via.placeholder.com/150" class="rounded-circle mb-3 border border-gold" alt="Profile Picture">
+                                <h3 class="gold-text mb-3" id="profileUsername">Guest</h3>
+                                <p class="text-muted mb-4" id="profileBio">Share your bio here. Let the community know who you are.</p>
+                                <div class="row text-center mb-4">
+                                    <div class="col-md-4">
+                                        <h5 class="gold-text">BACK Balance</h5>
+                                        <p id="profileBackBalance">0</p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h5 class="gold-text">Badges</h5>
+                                        <p id="profileBadgesCount">0</p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h5 class="gold-text">Stories</h5>
+                                        <p id="profileStoriesCount">0</p>
+                                    </div>
                                 </div>
-                                <div class="col-md-4">
-                                    <h5>Badges</h5>
-                                    <p id="profileBadgesCount">0</p>
-                                </div>
-                                <div class="col-md-4">
-                                    <h5>Stories</h5>
-                                    <p id="profileStoriesCount">0</p>
-                                </div>
+                                <button class="btn btn-gold mt-3" data-bs-toggle="modal" data-bs-target="#editProfileModal">
+                                    Edit Profile
+                                </button>
                             </div>
-                            <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#editProfileModal">Edit Profile</button>
                         </div>
                     </div>
                 </div>
@@ -79,24 +91,47 @@
 
         <!-- User Activity -->
         <section class="py-4">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Your Stories</h5>
-                            <ul class="list-group list-group-flush" id="profileStoriesList">
-                                <li class="list-group-item">No stories yet.</li>
-                            </ul>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card bg-dark border-gold">
+                            <div class="card-body">
+                                <h5 class="card-title gold-text mb-4">Your Stories</h5>
+                                <ul class="list-group list-group-flush" id="profileStoriesList">
+                                    <li class="list-group-item bg-black text-light border-gold">No stories yet.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card bg-dark border-gold">
+                            <div class="card-body">
+                                <h5 class="card-title gold-text mb-4">Your Badges</h5>
+                                <div class="row" id="profileBadgesList">
+                                    <p class="text-muted">No badges yet.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Your Badges</h5>
-                            <div class="row" id="profileBadgesList">
-                                <!-- Badges will be loaded here -->
-                                <p class="text-muted">No badges yet.</p>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card bg-dark border-gold">
+                            <div class="card-body">
+                                <h5 class="card-title gold-text mb-4">Your Campaigns</h5>
+                                <ul class="list-group list-group-flush" id="profileCampaignsList">
+                                    <li class="list-group-item bg-black text-light border-gold">No campaigns yet.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card bg-dark border-gold">
+                            <div class="card-body">
+                                <h5 class="card-title gold-text mb-4">Your Skills</h5>
+                                <ul class="list-group list-group-flush" id="profileSkillsList">
+                                    <li class="list-group-item bg-black text-light border-gold">No skills listed yet.</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -106,37 +141,40 @@
     </main>
 
     <!-- Edit Profile Modal -->
-    <div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="editProfileModalLabel">Edit Profile</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <div class="modal fade" id="editProfileModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header border-bottom border-gold">
+                    <h5 class="modal-title gold-text">Edit Profile</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <form id="profileForm">
                         <div class="mb-3">
-                            <label for="editUsername" class="form-label">Username</label>
-                            <input type="text" class="form-control" id="editUsername" required>
+                            <label for="editUsername" class="form-label gold-text">Username</label>
+                            <input type="text" class="form-control bg-dark text-light border-gold" id="editUsername" placeholder="e.g., JohnD" required>
                         </div>
                         <div class="mb-3">
-                            <label for="editBio" class="form-label">Bio</label>
-                            <textarea class="form-control" id="editBio" rows="3"></textarea>
+                            <label for="editBio" class="form-label gold-text">Bio</label>
+                            <textarea class="form-control bg-dark text-light border-gold" id="editBio" rows="5" placeholder="Tell the community about yourself..."></textarea>
                         </div>
                     </form>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" id="saveProfileBtn">Save Changes</button>
+                <div class="modal-footer border-top border-gold">
+                    <button type="button" class="btn btn-outline-gold" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-gold" id="saveProfileBtn">Save Changes</button>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
+    <footer class="bg-black text-white py-4 border-top border-gold">
         <div class="container text-center">
-            <p>&copy; 2026 BACKChain Lite. All rights reserved.</p>
+            <p class="mb-2">$BACK: The Token for Act II.</p>
+            <p class="text-muted small mb-0">
+                $BACK is a community token with no monetary value. This platform is for entertainment and community-building purposes only.
+            </p>
         </div>
     </footer>
 

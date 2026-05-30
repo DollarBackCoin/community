@@ -11,25 +11,70 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body class="bg-black text-light">
-    <!-- Navigation Bar (Same as index.html) -->
+    <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-gold">
-        <!-- Navbar content here -->
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo.png" alt="$BACK Logo" height="40" class="me-2">
+                <span class="fw-bold gold-text">$BACK</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active gold-text" href="my-story.html">My Story</a></li>
+                    <li class="nav-item"><a class="nav-link" href="my-goals.html">30 Days of BACK</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gofundme.html">GoFundMe</a></li>
+                    <li class="nav-item"><a class="nav-link" href="skill-swap.html">Skill Swap</a></li>
+                    <li class="nav-item"><a class="nav-link" href="barter-board.html">Barter Board</a></li>
+                    <li class="nav-item"><a class="nav-link" href="back-up-board.html">BACK Up Board</a></li>
+                    <li class="nav-item"><a class="nav-link" href="burn-wall.html">Burn Wall</a></li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link gold-text fw-bold" href="#" id="loginBtn">Login</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
     <!-- Main Content -->
-    <main class="container my-5">
-        <section class="text-center py-4">
-            <h1 class="display-4 gold-text fw-bold mb-4">📖 My Story</h1>
-            <p class="lead fs-5 mb-5">
-                Every man has a story. This is where you tell yours. No judgment. No pity. Just respect.
-            </p>
-            <button class="btn btn-gold" data-bs-toggle="modal" data-bs-target="#addStoryModal">Share Your Story</button>
+    <main>
+        <!-- Hero Section -->
+        <section class="py-5 text-center">
+            <div class="container">
+                <h1 class="display-4 gold-text fw-bold mb-4">📖 My Story</h1>
+                <p class="lead fs-5 mb-5">
+                    Every man has a story. This is where you tell yours. No judgment. No pity. Just respect.
+                </p>
+                <button class="btn btn-gold btn-lg px-4" data-bs-toggle="modal" data-bs-target="#addStoryModal">
+                    Share Your Story
+                </button>
+            </div>
         </section>
 
         <!-- Stories Grid -->
         <section class="py-4">
-            <div class="row" id="storiesGrid">
-                <!-- Stories will be loaded here via JavaScript -->
+            <div class="container">
+                <div class="row" id="storiesGrid">
+                    <!-- Example Story Card -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card bg-dark border-gold h-100">
+                            <div class="card-body">
+                                <h5 class="card-title gold-text">The Day I Lost Everything</h5>
+                                <p class="card-text">
+                                    I woke up with nothing. No job, no home, no hope. But I had one thing left: my pride.
+                                    And that was enough to start rebuilding.
+                                </p>
+                                <p class="card-text"><small class="text-muted">By John D. | Career</small></p>
+                                <a href="#" class="btn btn-outline-gold btn-sm">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- More stories will be loaded here via JavaScript -->
+                </div>
             </div>
         </section>
     </main>
@@ -46,19 +91,21 @@
                     <form id="storyForm">
                         <div class="mb-3">
                             <label for="storyTitle" class="form-label gold-text">Title</label>
-                            <input type="text" class="form-control bg-dark text-light border-gold" id="storyTitle" required>
+                            <input type="text" class="form-control bg-dark text-light border-gold" id="storyTitle" placeholder="e.g., The Day I Fought Back" required>
                         </div>
                         <div class="mb-3">
                             <label for="storyDescription" class="form-label gold-text">Your Story</label>
-                            <textarea class="form-control bg-dark text-light border-gold" id="storyDescription" rows="5" required></textarea>
+                            <textarea class="form-control bg-dark text-light border-gold" id="storyDescription" rows="5" placeholder="Tell your story here..." required></textarea>
                         </div>
                         <div class="mb-3">
                             <label for="storyCategory" class="form-label gold-text">Category</label>
                             <select class="form-select bg-dark text-light border-gold" id="storyCategory" required>
+                                <option value="" disabled selected>Select a category</option>
                                 <option value="Career" class="bg-dark">Career</option>
                                 <option value="Health" class="bg-dark">Health</option>
                                 <option value="Finance" class="bg-dark">Finance</option>
                                 <option value="Personal" class="bg-dark">Personal</option>
+                                <option value="Other" class="bg-dark">Other</option>
                             </select>
                         </div>
                     </form>
@@ -71,9 +118,14 @@
         </div>
     </div>
 
-    <!-- Footer (Same as index.html) -->
+    <!-- Footer -->
     <footer class="bg-black text-white py-4 border-top border-gold">
-        <!-- Footer content here -->
+        <div class="container text-center">
+            <p class="mb-2">$BACK: The Token for Act II.</p>
+            <p class="text-muted small mb-0">
+                $BACK is a community token with no monetary value. This platform is for entertainment and community-building purposes only.
+            </p>
+        </div>
     </footer>
 
     <!-- Firebase and Custom JS -->
